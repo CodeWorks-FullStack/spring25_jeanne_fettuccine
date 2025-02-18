@@ -63,6 +63,28 @@ function calculateCartTotal() {
   return total
 }
 
+function checkout() {
+  const total = calculateCartTotal()
+
+  if (total == 0) {
+    window.alert("Hey add some stuff to your cart")
+    return
+  }
+
+  window.alert(`Enjoy your order! Your total was $${total.toFixed(2)}!`)
+
+  clearCart()
+  drawCart()
+  drawCartTotal()
+}
+
+function clearCart() {
+  for (let i = 0; i < menuItems.length; i++) {
+    const menuItem = menuItems[i]
+    menuItem.quantity = 0
+  }
+}
+
 // !SECTION
 
 // SECTION drawing (DOM manipulation) ✏️
