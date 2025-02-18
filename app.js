@@ -38,6 +38,17 @@ function addFettuccineToCart() {
   fettuccine.quantity++
 }
 
+function addItemToCart(indexNumber) {
+  const menuItem = menuItems[indexNumber]
+
+  if (menuItem == undefined) {
+    console.warn(`${indexNumber} is not a valid index`)
+    return // hard stop
+  }
+
+  menuItem.quantity++
+}
+
 // !SECTION
 
 // SECTION drawing (DOM manipulation) ✏️
