@@ -49,6 +49,7 @@ function addItemToCart(indexNumber) {
   menuItem.quantity++
 
   drawCart()
+  drawCartTotal()
 }
 
 function calculateCartTotal() {
@@ -79,5 +80,13 @@ function drawCart() {
 
   const cartListElem = document.getElementById('cartList')
   cartListElem.innerHTML = itemNames
+}
+
+function drawCartTotal() {
+  const cartTotalElem = document.getElementById('cartTotal')
+
+  const cartTotal = calculateCartTotal()
+
+  cartTotalElem.innerText = cartTotal.toFixed(2)
 }
 // !SECTION
