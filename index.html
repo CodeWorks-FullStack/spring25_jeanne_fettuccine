@@ -33,6 +33,7 @@
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <b>$7.00</b>
+                    <!-- NOTE 0 is an argument, the parameter will take on the value of the argument in the addItemToCart function -->
                     <button onclick="addItemToCart(0)" class="btn btn-success" type="button"
                       title="Add spaghetti to cart">
                       <span class="mdi mdi-cart-plus"></span>
@@ -109,6 +110,7 @@
             <ul id="cartList">
               <!-- cart items draw here -->
             </ul>
+            <!-- NOTE spans are handy for targeting single bits of text -->
             <p>Total: $<span id="cartTotal">0</span></p>
             <div class="text-end">
               <button onclick="checkout()" class="btn btn-success" type="button">Checkout</button>
