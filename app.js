@@ -47,10 +47,26 @@ function addItemToCart(indexNumber) {
   }
 
   menuItem.quantity++
+
+  drawCart()
 }
 
 // !SECTION
 
 // SECTION drawing (DOM manipulation) ✏️
 
+function drawCart() {
+
+  let itemNames = ''
+
+  for (let i = 0; i < menuItems.length; i++) {
+    const menuItem = menuItems[i]
+    if (menuItem.quantity > 0) {
+      itemNames += `<li>${menuItem.name} Qty: ${menuItem.quantity} $${menuItem.quantity * menuItem.price}</li>`
+    }
+  }
+
+  const cartListElem = document.getElementById('cartList')
+  cartListElem.innerHTML = itemNames
+}
 // !SECTION
