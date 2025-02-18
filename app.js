@@ -28,7 +28,14 @@ const menuItems = [
 // SECTION actions / logic ⚙️
 
 function addSpaghettiToCart() {
-  console.log('you clicked the button');
+  const spaghetti = menuItems[0]
+  spaghetti.quantity++
+  console.log('you clicked the button', spaghetti);
+}
+
+function addFettuccineToCart() {
+  const fettuccine = menuItems[1]
+  fettuccine.quantity++
 }
 
 // !SECTION
