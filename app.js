@@ -51,6 +51,17 @@ function addItemToCart(indexNumber) {
   drawCart()
 }
 
+function calculateCartTotal() {
+  let total = 0
+
+  for (let i = 0; i < menuItems.length; i++) {
+    const menuItem = menuItems[i];
+    total += menuItem.price * menuItem.quantity
+  }
+
+  return total
+}
+
 // !SECTION
 
 // SECTION drawing (DOM manipulation) ✏️
