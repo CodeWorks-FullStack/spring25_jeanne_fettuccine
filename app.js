@@ -27,6 +27,10 @@ const menuItems = [
 
 // SECTION actions / logic ⚙️
 
+function addSpaghettiToCart() {
+  console.log('you clicked the button');
+}
+
 // !SECTION
 
 // SECTION drawing (DOM manipulation) ✏️
