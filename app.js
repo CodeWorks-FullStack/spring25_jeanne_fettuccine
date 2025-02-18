@@ -73,9 +73,10 @@ function checkout() {
 
   if (cartTotal == 0) {
     window.alert("Hey add some stuff to your cart")
-    return
+    return // hard stop
   }
 
+  // NOTE opens a window in the browser tab with our supplied argument as the text content
   window.alert(`Enjoy your order! Your total was $${cartTotal.toFixed(2)}!`)
 
   clearCart()
